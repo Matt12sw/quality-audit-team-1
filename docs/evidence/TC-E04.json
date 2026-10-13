@@ -1,0 +1,17 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/products/9999",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "body": "<!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\n"
+    }
+  }
+]

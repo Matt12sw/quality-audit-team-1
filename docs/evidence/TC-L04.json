@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/orders",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": {
+        "items": [
+          {
+            "product_id": 1,
+            "quantity": 0
+          }
+        ],
+        "payment_method": "card"
+      }
+    },
+    "response": {
+      "status": 400,
+      "content_type": "application/json",
+      "body": {
+        "error": "quantity must be between 1 and 20"
+      }
+    }
+  }
+]

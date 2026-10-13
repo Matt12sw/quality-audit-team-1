@@ -1,0 +1,280 @@
+{
+  "TC-N01": {
+    "obtenu": "Redirection vers http://127.0.0.1:5000/ ; utilisateur affiché : « Alice Martin » ; lien Déconnexion présent.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-N01_1_formulaire.png",
+      "evidence/TC-N01_2_connecte.png"
+    ]
+  },
+  "TC-N02": {
+    "obtenu": "Restaurants affichés : ['Pizza Roma'].",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-N02_recherche_pizza.png"
+    ]
+  },
+  "TC-N03": {
+    "obtenu": "Sous-total 23.80 € ; livraison 2.99 € ; total 26.79 €.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-N03_panier.png"
+    ]
+  },
+  "TC-N04": {
+    "obtenu": "Checkout : réduction 2.38 €, total 24.41 €. Commande #2 statut « confirmed », paiement « paid · card », total 24.41 €. Panier après commande : vide.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-N04_1_checkout_coupon.png",
+      "evidence/TC-N04_2_commande_confirmee.png"
+    ]
+  },
+  "TC-N06": {
+    "obtenu": "Message : ['Commande annulée.'] ; statut : « cancelled ».",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-N06_annulation.png"
+    ]
+  },
+  "TC-N05": {
+    "obtenu": "Swagger UI : HTTP 200. Appel direct : HTTP 200, count=6, restaurants : ['Couscous Atlas', 'Tokyo Bowl', 'Burger Factory', 'Green Kitchen', 'Pizza Roma', 'Night Sushi'].",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-N05_swagger_get_restaurants.png",
+      "evidence/TC-N05.json"
+    ]
+  },
+  "TC-N07": {
+    "obtenu": "Aucun bouton de suppression par ligne (libellés « Supprimer/Retirer » : 0, formulaires /cart/remove : 0). La dernière cellule de la ligne contient seulement « <form></form> » (formulaire vide imbriqué). Seul contournement : quantité 0 ou « Vider le panier ».",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-N07_panier_sans_suppression.png"
+    ]
+  },
+  "TC-L01": {
+    "obtenu": "URL http://127.0.0.1:5000/?q=&category=&sort=rating&max_delivery=2.50 → restaurants affichés (frais) : [('Couscous Atlas', 2.99), ('Tokyo Bowl', 3.49), ('Burger Factory', 2.99), ('Night Sushi', 2.99)]. Green Kitchen (1,99 €) et Pizza Roma (2,49 €) sont absents.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-L01_filtre_livraison.png"
+    ]
+  },
+  "TC-L02": {
+    "obtenu": "19.99 → HTTP 200 {'error': 'Montant minimum non atteint.', 'minimum': 20.0, 'valid': False} ; 20.00 → HTTP 200 {'code': 'WELCOME10', 'discount': 2.0, 'discount_percent': 10.0, 'valid': True}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-L02.json"
+    ]
+  },
+  "TC-L03": {
+    "obtenu": "HTTP 200 {'code': 'WELCOME10', 'discount': 8.0, 'discount_percent': 10.0, 'valid': True}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-L03.json"
+    ]
+  },
+  "TC-L04": {
+    "obtenu": "HTTP 400 {'error': 'quantity must be between 1 and 20'}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-L04.json"
+    ]
+  },
+  "TC-L05": {
+    "obtenu": "HTTP 400 {'error': 'quantity must be between 1 and 20'}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-L05.json"
+    ]
+  },
+  "TC-L06": {
+    "obtenu": "Stock avant : 2. POST → HTTP 201, commande #3 statut « confirmed », quantité 3. Stock après : -1.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-L06.json"
+    ]
+  },
+  "TC-L08": {
+    "obtenu": "Message après ajout : ['Veggie Burger ajouté au panier.']. Panier : ['Veggie Burger']. Le champ quantité a max=0 (stock) : le formulaire « Mettre à jour » est invalide (bloqué par le navigateur).",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-L08_1_ajout_hors_stock.png",
+      "evidence/TC-L08_2_panier.png"
+    ]
+  },
+  "TC-E01": {
+    "obtenu": "Message : ['Email ou mot de passe incorrect.'] ; utilisateur connecté : False.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-E01_login_refuse.png"
+    ]
+  },
+  "TC-E02": {
+    "obtenu": "HTTP 401 {'error': 'missing or invalid X-API-Key', 'hint': 'Use Swagger > Authorize'}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-E02.json"
+    ]
+  },
+  "TC-E03": {
+    "obtenu": "HTTP 401 {'error': 'missing or invalid X-API-Key', 'hint': 'Use Swagger > Authorize'}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-E03.json"
+    ]
+  },
+  "TC-E04": {
+    "obtenu": "HTTP 404, Content-Type « text/html; charset=utf-8 », corps : page HTML Werkzeug « Not Found » (pas de JSON).",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-E04.json"
+    ]
+  },
+  "TC-E05": {
+    "obtenu": "HTTP 404 {'error': 'Coupon invalide ou expiré.', 'valid': False}.",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-E05.json"
+    ]
+  },
+  "TC-E06": {
+    "obtenu": "HTTP 201 ; commande #4 créée, sous-total 35.8 €, discount 3.58 € (10 % appliqué), total 35.21 €.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-E06.json"
+    ]
+  },
+  "TC-E07": {
+    "obtenu": "Message : ['Un compte existe déjà avec cet email.'].",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-E07_email_existant.png"
+    ]
+  },
+  "TC-E08": {
+    "obtenu": "Commande #5 créée, statut « confirmed », paiement « paid ». Total 26.79 €, montant remis 1.0 €, monnaie calculée -25.79 € (négative).",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-E08_1_checkout_especes_1euro.png",
+      "evidence/TC-E08_2_commande_creee.png",
+      "evidence/TC-E08_network.json",
+      "evidence/TC-E08.json"
+    ]
+  },
+  "TC-E09": {
+    "obtenu": "Redirection vers http://127.0.0.1:5000/ ; message : ['Accès réservé aux administrateurs.'].",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-E09_admin_refuse.png"
+    ]
+  },
+  "TC-E10": {
+    "obtenu": "HTTP 302, en-tête Location : « https://evil.example.com/phishing » → l'utilisateur authentifié est envoyé vers un domaine externe.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-E10.json"
+    ]
+  },
+  "TC-E11": {
+    "obtenu": "Non exécutable : options de paiement proposées ['Carte bancaire — succès', 'PayPal — succès', 'Espèces']. Le simulateur ne permet pas de provoquer un refus de paiement (aucune carte de test, aucun paramètre). Le chemin payment_failed n'est pas atteignable.",
+    "statut": "Blocked",
+    "preuves": [
+      "evidence/TC-E11_options_paiement.png"
+    ]
+  },
+  "TC-R01": {
+    "obtenu": "Message : ['Un panier ne peut contenir que des produits du même restaurant.']. Panier : ['Classic Burger'].",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-R01_1_refus_multi_restaurant.png",
+      "evidence/TC-R01_2_panier.png"
+    ]
+  },
+  "TC-R02": {
+    "obtenu": "Ajout accepté (['Late Sushi Box ajouté au panier.']) alors que le restaurant est affiché FERMÉ ; commande #6 créée au statut « confirmed », total 16.99 €.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R02_1_restaurant_ferme_ajout.png",
+      "evidence/TC-R02_2_commande_restaurant_ferme.png"
+    ]
+  },
+  "TC-R03": {
+    "obtenu": "Commande #7 créée (statut « confirmed ») avec un sous-total de 3.5 € pour un minimum affiché de 25,00 €.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R03_1_checkout_sous_minimum.png",
+      "evidence/TC-R03_2_commande_sous_minimum.png"
+    ]
+  },
+  "TC-R04": {
+    "obtenu": "Sous-total 35.8 € ; réduction appliquée 3.58 € (= 10 %) au lieu de 5,37 € (15 %) ; total 35.21 €.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R04_0_promo_annoncee.png",
+      "evidence/TC-R04_1_checkout_atlas15.png"
+    ]
+  },
+  "TC-R05": {
+    "obtenu": "Commandes d'Alice avant : 7, après : 9 (+2). Nouvelles commandes : [(9, 'paypal', 13.39, '2026-10-13T13:03:08.453995'), (8, 'paypal', 13.39, '2026-10-13T13:03:08.453440')].",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R05_commandes_paypal_dupliquees.png",
+      "evidence/TC-R05.json"
+    ]
+  },
+  "TC-R06": {
+    "obtenu": "Commande #8 : statut après étape 1 « delivered », puis « confirmed » après demande confirmed. Message : ['Statut mis à jour.'].",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R06_admin_transition.png",
+      "evidence/TC-R06.json"
+    ]
+  },
+  "TC-R07": {
+    "obtenu": "Bob a 0 commande(s). Message après publication : ['Merci pour votre avis !'].",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R07_avis_sans_commande.png"
+    ]
+  },
+  "TC-R08": {
+    "obtenu": "Message : ['Cette commande ne peut plus être annulée.'] ; statut : « delivered ». (Remarque : le bouton « Annuler la commande » reste affiché sur une commande livrée.)",
+    "statut": "Pass",
+    "preuves": [
+      "evidence/TC-R08_annulation_livree.png"
+    ]
+  },
+  "TC-R09": {
+    "obtenu": "HTTP 200 {'code': 'SAVE20', 'discount': 12.0, 'discount_percent': 20.0, 'valid': True} : le coupon est validé sur un sous-total fictif de 9 999 € fourni par le client, sans lien avec un panier réel.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R09.json"
+    ]
+  },
+  "TC-R10": {
+    "obtenu": "UI : Aucun restaurant trouvé ; API : count=0.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R10_recherche_description.png",
+      "evidence/TC-R10.json"
+    ]
+  },
+  "TC-R11": {
+    "obtenu": "Compte qa.testeur.1791896590@example.com créé ; adresse proposée : ['Domicile — ,  ']. Commande #10 créée (statut « confirmed ») ; bloc Livraison : « (vide) ».",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-R11_1_checkout_adresse_vide.png",
+      "evidence/TC-R11_2_commande_adresse_vide.png"
+    ]
+  },
+  "TC-L07": {
+    "obtenu": "Message : ['Double Cheese ajouté au panier.']. Commande #11 créée pour 500 Double Cheese. Stock avant : 100, après : -400.",
+    "statut": "Fail",
+    "preuves": [
+      "evidence/TC-L07_1_devtools_quantite_500.png",
+      "evidence/TC-L07_2_panier_500.png",
+      "evidence/TC-L07_3_commande.png",
+      "evidence/TC-L07.json",
+      "evidence/TC-L07_devtools.js"
+    ]
+  }
+}

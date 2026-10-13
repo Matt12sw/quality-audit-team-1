@@ -1,0 +1,25 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/coupons/validate",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": {
+        "code": "SAVE20",
+        "subtotal": 9999
+      }
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "code": "SAVE20",
+        "discount": 12.0,
+        "discount_percent": 20.0,
+        "valid": true
+      }
+    }
+  }
+]

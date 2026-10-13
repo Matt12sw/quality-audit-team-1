@@ -1,0 +1,655 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/orders",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "count": 7,
+        "items": [
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:07.618905",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 7,
+            "items": [
+              {
+                "line_total": 3.5,
+                "product_id": 23,
+                "product_name": "Thé à la menthe",
+                "quantity": 1,
+                "unit_price": 3.5
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 5,
+            "status": "confirmed",
+            "subtotal": 3.5,
+            "total": 6.49
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:07.236919",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 6,
+            "items": [
+              {
+                "line_total": 14.0,
+                "product_id": 24,
+                "product_name": "Late Sushi Box",
+                "quantity": 1,
+                "unit_price": 14.0
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 6,
+            "status": "confirmed",
+            "subtotal": 14.0,
+            "total": 16.99
+          },
+          {
+            "cash_received": 1.0,
+            "change_due": -25.79,
+            "created_at": "2026-10-13T13:03:05.852653",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 5,
+            "items": [
+              {
+                "line_total": 23.8,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 2,
+                "unit_price": 11.9
+              }
+            ],
+            "payment_method": "cash",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "confirmed",
+            "subtotal": 23.8,
+            "total": 26.79
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:05.336693",
+            "delivery_fee": 2.99,
+            "discount": 3.58,
+            "id": 4,
+            "items": [
+              {
+                "line_total": 35.8,
+                "product_id": 20,
+                "product_name": "Couscous Royal",
+                "quantity": 2,
+                "unit_price": 17.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 5,
+            "status": "confirmed",
+            "subtotal": 35.8,
+            "total": 35.21
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:04.628520",
+            "delivery_fee": 3.49,
+            "discount": 0.0,
+            "id": 3,
+            "items": [
+              {
+                "line_total": 47.7,
+                "product_id": 7,
+                "product_name": "Salmon Bowl",
+                "quantity": 3,
+                "unit_price": 15.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 2,
+            "status": "confirmed",
+            "subtotal": 47.7,
+            "total": 51.19
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:00.770670",
+            "delivery_fee": 2.99,
+            "discount": 2.38,
+            "id": 2,
+            "items": [
+              {
+                "line_total": 23.8,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 2,
+                "unit_price": 11.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "cancelled",
+            "subtotal": 23.8,
+            "total": 24.41
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:02:53.374488",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 1,
+            "items": [
+              {
+                "line_total": 11.9,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 1,
+                "unit_price": 11.9
+              },
+              {
+                "line_total": 3.5,
+                "product_id": 3,
+                "product_name": "Frites maison",
+                "quantity": 1,
+                "unit_price": 3.5
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "delivered",
+            "subtotal": 15.4,
+            "total": 18.39
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/orders",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "count": 9,
+        "items": [
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:08.453995",
+            "delivery_fee": 2.49,
+            "discount": 0.0,
+            "id": 9,
+            "items": [
+              {
+                "line_total": 10.9,
+                "product_id": 16,
+                "product_name": "Margherita",
+                "quantity": 1,
+                "unit_price": 10.9
+              }
+            ],
+            "payment_method": "paypal",
+            "payment_status": "paid",
+            "restaurant_id": 4,
+            "status": "confirmed",
+            "subtotal": 10.9,
+            "total": 13.39
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:08.453440",
+            "delivery_fee": 2.49,
+            "discount": 0.0,
+            "id": 8,
+            "items": [
+              {
+                "line_total": 10.9,
+                "product_id": 16,
+                "product_name": "Margherita",
+                "quantity": 1,
+                "unit_price": 10.9
+              }
+            ],
+            "payment_method": "paypal",
+            "payment_status": "paid",
+            "restaurant_id": 4,
+            "status": "confirmed",
+            "subtotal": 10.9,
+            "total": 13.39
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:07.618905",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 7,
+            "items": [
+              {
+                "line_total": 3.5,
+                "product_id": 23,
+                "product_name": "Thé à la menthe",
+                "quantity": 1,
+                "unit_price": 3.5
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 5,
+            "status": "confirmed",
+            "subtotal": 3.5,
+            "total": 6.49
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:07.236919",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 6,
+            "items": [
+              {
+                "line_total": 14.0,
+                "product_id": 24,
+                "product_name": "Late Sushi Box",
+                "quantity": 1,
+                "unit_price": 14.0
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 6,
+            "status": "confirmed",
+            "subtotal": 14.0,
+            "total": 16.99
+          },
+          {
+            "cash_received": 1.0,
+            "change_due": -25.79,
+            "created_at": "2026-10-13T13:03:05.852653",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 5,
+            "items": [
+              {
+                "line_total": 23.8,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 2,
+                "unit_price": 11.9
+              }
+            ],
+            "payment_method": "cash",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "confirmed",
+            "subtotal": 23.8,
+            "total": 26.79
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:05.336693",
+            "delivery_fee": 2.99,
+            "discount": 3.58,
+            "id": 4,
+            "items": [
+              {
+                "line_total": 35.8,
+                "product_id": 20,
+                "product_name": "Couscous Royal",
+                "quantity": 2,
+                "unit_price": 17.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 5,
+            "status": "confirmed",
+            "subtotal": 35.8,
+            "total": 35.21
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:04.628520",
+            "delivery_fee": 3.49,
+            "discount": 0.0,
+            "id": 3,
+            "items": [
+              {
+                "line_total": 47.7,
+                "product_id": 7,
+                "product_name": "Salmon Bowl",
+                "quantity": 3,
+                "unit_price": 15.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 2,
+            "status": "confirmed",
+            "subtotal": 47.7,
+            "total": 51.19
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:00.770670",
+            "delivery_fee": 2.99,
+            "discount": 2.38,
+            "id": 2,
+            "items": [
+              {
+                "line_total": 23.8,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 2,
+                "unit_price": 11.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "cancelled",
+            "subtotal": 23.8,
+            "total": 24.41
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:02:53.374488",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 1,
+            "items": [
+              {
+                "line_total": 11.9,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 1,
+                "unit_price": 11.9
+              },
+              {
+                "line_total": 3.5,
+                "product_id": 3,
+                "product_name": "Frites maison",
+                "quantity": 1,
+                "unit_price": 3.5
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "delivered",
+            "subtotal": 15.4,
+            "total": 18.39
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/orders",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "count": 9,
+        "items": [
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:08.453995",
+            "delivery_fee": 2.49,
+            "discount": 0.0,
+            "id": 9,
+            "items": [
+              {
+                "line_total": 10.9,
+                "product_id": 16,
+                "product_name": "Margherita",
+                "quantity": 1,
+                "unit_price": 10.9
+              }
+            ],
+            "payment_method": "paypal",
+            "payment_status": "paid",
+            "restaurant_id": 4,
+            "status": "confirmed",
+            "subtotal": 10.9,
+            "total": 13.39
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:08.453440",
+            "delivery_fee": 2.49,
+            "discount": 0.0,
+            "id": 8,
+            "items": [
+              {
+                "line_total": 10.9,
+                "product_id": 16,
+                "product_name": "Margherita",
+                "quantity": 1,
+                "unit_price": 10.9
+              }
+            ],
+            "payment_method": "paypal",
+            "payment_status": "paid",
+            "restaurant_id": 4,
+            "status": "confirmed",
+            "subtotal": 10.9,
+            "total": 13.39
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:07.618905",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 7,
+            "items": [
+              {
+                "line_total": 3.5,
+                "product_id": 23,
+                "product_name": "Thé à la menthe",
+                "quantity": 1,
+                "unit_price": 3.5
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 5,
+            "status": "confirmed",
+            "subtotal": 3.5,
+            "total": 6.49
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:07.236919",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 6,
+            "items": [
+              {
+                "line_total": 14.0,
+                "product_id": 24,
+                "product_name": "Late Sushi Box",
+                "quantity": 1,
+                "unit_price": 14.0
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 6,
+            "status": "confirmed",
+            "subtotal": 14.0,
+            "total": 16.99
+          },
+          {
+            "cash_received": 1.0,
+            "change_due": -25.79,
+            "created_at": "2026-10-13T13:03:05.852653",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 5,
+            "items": [
+              {
+                "line_total": 23.8,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 2,
+                "unit_price": 11.9
+              }
+            ],
+            "payment_method": "cash",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "confirmed",
+            "subtotal": 23.8,
+            "total": 26.79
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:05.336693",
+            "delivery_fee": 2.99,
+            "discount": 3.58,
+            "id": 4,
+            "items": [
+              {
+                "line_total": 35.8,
+                "product_id": 20,
+                "product_name": "Couscous Royal",
+                "quantity": 2,
+                "unit_price": 17.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 5,
+            "status": "confirmed",
+            "subtotal": 35.8,
+            "total": 35.21
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:04.628520",
+            "delivery_fee": 3.49,
+            "discount": 0.0,
+            "id": 3,
+            "items": [
+              {
+                "line_total": 47.7,
+                "product_id": 7,
+                "product_name": "Salmon Bowl",
+                "quantity": 3,
+                "unit_price": 15.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 2,
+            "status": "confirmed",
+            "subtotal": 47.7,
+            "total": 51.19
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:03:00.770670",
+            "delivery_fee": 2.99,
+            "discount": 2.38,
+            "id": 2,
+            "items": [
+              {
+                "line_total": 23.8,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 2,
+                "unit_price": 11.9
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "cancelled",
+            "subtotal": 23.8,
+            "total": 24.41
+          },
+          {
+            "cash_received": null,
+            "change_due": null,
+            "created_at": "2026-10-13T13:02:53.374488",
+            "delivery_fee": 2.99,
+            "discount": 0.0,
+            "id": 1,
+            "items": [
+              {
+                "line_total": 11.9,
+                "product_id": 1,
+                "product_name": "Classic Burger",
+                "quantity": 1,
+                "unit_price": 11.9
+              },
+              {
+                "line_total": 3.5,
+                "product_id": 3,
+                "product_name": "Frites maison",
+                "quantity": 1,
+                "unit_price": 3.5
+              }
+            ],
+            "payment_method": "card",
+            "payment_status": "paid",
+            "restaurant_id": 1,
+            "status": "delivered",
+            "subtotal": 15.4,
+            "total": 18.39
+          }
+        ]
+      }
+    }
+  }
+]

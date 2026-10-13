@@ -1,0 +1,99 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/products/7",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "available": true,
+        "calories": 590,
+        "category": "Bowls",
+        "description": "Saumon, avocat, riz vinaigré",
+        "id": 7,
+        "is_vegetarian": false,
+        "name": "Salmon Bowl",
+        "price": 15.9,
+        "restaurant_id": 2,
+        "stock": 2
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/orders",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": {
+        "items": [
+          {
+            "product_id": 7,
+            "quantity": 3
+          }
+        ],
+        "payment_method": "card"
+      }
+    },
+    "response": {
+      "status": 201,
+      "content_type": "application/json",
+      "body": {
+        "cash_received": null,
+        "change_due": null,
+        "created_at": "2026-10-13T13:03:04.628520",
+        "delivery_fee": 3.49,
+        "discount": 0.0,
+        "id": 3,
+        "items": [
+          {
+            "line_total": 47.7,
+            "product_id": 7,
+            "product_name": "Salmon Bowl",
+            "quantity": 3,
+            "unit_price": 15.9
+          }
+        ],
+        "payment_method": "card",
+        "payment_status": "paid",
+        "restaurant_id": 2,
+        "status": "confirmed",
+        "subtotal": 47.7,
+        "total": 51.19
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/products/7",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "available": true,
+        "calories": 590,
+        "category": "Bowls",
+        "description": "Saumon, avocat, riz vinaigré",
+        "id": 7,
+        "is_vegetarian": false,
+        "name": "Salmon Bowl",
+        "price": 15.9,
+        "restaurant_id": 2,
+        "stock": -1
+      }
+    }
+  }
+]

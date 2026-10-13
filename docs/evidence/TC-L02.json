@@ -1,0 +1,47 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/coupons/validate",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": {
+        "code": "WELCOME10",
+        "subtotal": 19.99
+      }
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "error": "Montant minimum non atteint.",
+        "minimum": 20.0,
+        "valid": false
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/coupons/validate",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": {
+        "code": "WELCOME10",
+        "subtotal": 20.0
+      }
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "code": "WELCOME10",
+        "discount": 2.0,
+        "discount_percent": 10.0,
+        "valid": true
+      }
+    }
+  }
+]

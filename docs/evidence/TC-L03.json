@@ -1,0 +1,25 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/api/coupons/validate",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": {
+        "code": "WELCOME10",
+        "subtotal": 100
+      }
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "code": "WELCOME10",
+        "discount": 8.0,
+        "discount_percent": 10.0,
+        "valid": true
+      }
+    }
+  }
+]

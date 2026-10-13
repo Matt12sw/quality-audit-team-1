@@ -1,0 +1,18 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/restaurants",
+      "headers": {},
+      "json": null
+    },
+    "response": {
+      "status": 401,
+      "content_type": "application/json",
+      "body": {
+        "error": "missing or invalid X-API-Key",
+        "hint": "Use Swagger > Authorize"
+      }
+    }
+  }
+]

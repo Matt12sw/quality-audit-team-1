@@ -1,0 +1,7 @@
+[
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:5000/checkout",
+    "post_data": "address_id=1&customer_note=&coupon=&payment_method=cash&cash_received=1&confirm=1"
+  }
+]

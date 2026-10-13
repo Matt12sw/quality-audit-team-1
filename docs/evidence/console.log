@@ -1,0 +1,1 @@
+[N05] error: Deprecated: escaping deep link whitespace with `_` is unsupported and will be removed in a future 5.x release. Use `%20` instead. (http://127.0.0.1:5000/docs/#/Restaurants)

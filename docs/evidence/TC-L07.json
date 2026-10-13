@@ -1,0 +1,54 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/products/2",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "available": true,
+        "calories": 910,
+        "category": "Burgers",
+        "description": "Double steak, double cheddar",
+        "id": 2,
+        "is_vegetarian": false,
+        "name": "Double Cheese",
+        "price": 14.9,
+        "restaurant_id": 1,
+        "stock": 100
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/api/products/2",
+      "headers": {
+        "X-API-Key": "quickorder-demo-key"
+      },
+      "json": null
+    },
+    "response": {
+      "status": 200,
+      "content_type": "application/json",
+      "body": {
+        "available": true,
+        "calories": 910,
+        "category": "Burgers",
+        "description": "Double steak, double cheddar",
+        "id": 2,
+        "is_vegetarian": false,
+        "name": "Double Cheese",
+        "price": 14.9,
+        "restaurant_id": 1,
+        "stock": -400
+      }
+    }
+  }
+]

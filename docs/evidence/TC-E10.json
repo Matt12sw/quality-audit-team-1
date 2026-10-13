@@ -1,0 +1,16 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "http://127.0.0.1:5000/login?next=https://evil.example.com/phishing",
+      "form": {
+        "email": "alice@example.com",
+        "password": "***"
+      }
+    },
+    "response": {
+      "status": 302,
+      "location": "https://evil.example.com/phishing"
+    }
+  }
+]
